@@ -28,7 +28,7 @@ public class MovieResources {
     }
 
     @GetMapping("/{id}")
-    public Optional<Movie> get(@PathVariable("id") Long id) {
+    public Movie get(@PathVariable("id") Long id) {
         return service.getMovieById(id);
     }
     @GetMapping
