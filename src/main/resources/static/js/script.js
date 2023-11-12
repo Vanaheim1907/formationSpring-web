@@ -1,3 +1,4 @@
+
 fetch('movie')
     .then(res => res.json())
     .then(res => {
@@ -19,7 +20,7 @@ fetch('movie')
             tr.appendChild(td);
 
             td = document.createElement("td");
-            text = document.createTextNode(`${movie.type}`);
+            text = document.createTextNode(`${movie.genre}`);
             td.appendChild(text);
             tr.appendChild(td);
 
@@ -53,17 +54,12 @@ function showDetail(id){
         invoiceDetailNode.appendChild(p);
 
         p = document.createElement("p");
-        text = document.createTextNode(`Type: ${res.type}`);
+        text = document.createTextNode(`Genre: ${res.genre}`);
         p.appendChild(text);
         invoiceDetailNode.appendChild(p);
 
         p = document.createElement("p");
         text = document.createTextNode(`Description: ${res.description}`);
-        p.appendChild(text);
-        invoiceDetailNode.appendChild(p);
-
-        p = document.createElement("p");
-        text = document.createTextNode(`Description: ${res.id}`);
         p.appendChild(text);
         invoiceDetailNode.appendChild(p);
 

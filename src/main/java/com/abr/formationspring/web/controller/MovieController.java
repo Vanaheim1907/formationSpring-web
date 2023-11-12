@@ -38,7 +38,7 @@ public class MovieController {
         }
 
         Movie movie = new Movie();
-        movie.setType(movieform.getType());
+        movie.setGenre(movieform.getType());
         movie.setTitle(movieform.getTitle());
         movie.setDescription(movieform.getDescription());
 
